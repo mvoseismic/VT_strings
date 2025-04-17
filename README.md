@@ -1,41 +1,126 @@
-# joinhelis
+# VT_strings
 
-Create montages of helicorder plots.
+Scripts for analysing VT string data.
 
-## joinhelis.pl
+## plotBigStrings
 
-* Creates multi-station montages for one day.
-* Run daily as a cron job under user *mvo* on *winston1*.
+Create special plot comparing largest strings.
 
-### Usage
+## plotOneStation
 
-*joinhelis.pl \<--stagrp\> \<--datebeg\> \<--dateend\> *
+Create montage of one-station plots for strings.
 
-* --stagrp: stations to montage (see code for options).
+## plotStrings
 
-## heliStackMonths.pl, heliStack.pl
+Various plots of VT strings.
 
-* Scripts to create multi-day, multi-station montages of helicorders.
-* Superceded by *heliStackWide*.
+### plot0.sh
 
-## oneStationMonthAll.sh
+- Creates plots and data for all strings in *./data/event_lists/0-new* and *data/seisan_files/0-new*.
+- Calls *plot_a_lot.py* and *plotPs.pl*.
 
-* Script to run *oneStationMonth.pl* for each station in a loop of dates.
-* Used to catch up missing plots.
+### plot_a_lot.py
 
-## oneStationMonth.pl
+* Creates multi-channel plots for all strings in *./data/event_lists/0-new* and *data/seisan_files/0-new*.
+* Saves plots in *data/all_plots*.
+* Creates miniseed files for all strings in *./data/event_lists/0-new* and *data/seisan_files/0-new*.
+* Saves files in *./data/mseed_files*.
+* Uses *SAC*.
 
-* Creates a montage of one month's helicorder plots for one station.
-* Saves plot in */mnt/mvofls2/Seismic_Data/monitoring_data/helicorder_plots_station_month*.
+### plotPs.pl
 
-### Usage
+* Creates montage of event waveforms for all strings in *./data/event_lists/0-new* and *data/seisan_files/0-new*.
+* Used to identify if event waveforms are repeating.
+* Plots stored in *./data/polarities/plots*.
+* Usual practice is to delete all the waveform plots for signals that are small and unclear, then repeat the *montage* command (handily printed out at the end of the script).
 
-*oneStationMonth.pl \<station code\> \<month\> \<year\>*
+### plotSpecial3Montage.pl
 
-## oneStationMonthThis.sh
+* Creates a script to create a montage that compares waveforms and spectrograms.
+* Prompts for string to plot.
+* Script saved as *~seisan/tmp--DONT_USE/special3Montage/doit.sh*.
+* Uses *getnPlot*.
 
-* Runs *oneStationMonth.pl* for each station.
-* Run daily as a cron job on *opsproc3*.
+### plot_spectrograms.pl
+
+* Creates spectrograms  for all strings in *./data/event_lists/0-new* and *data/seisan_files/0-new*.
+* Uses *SAC* and *wavetool*.
+* Not working due to *SEISAN* problem on *opsproc3*.
+
+## scripts
+
+Basic analysis of VT strings.
+
+### check_all.pl
+
+* Lists numbers of various files in *data* for each string.
+
+### check_helis.pl
+
+* Lists number of helicorder plots in *data/heli_plots* for each string.
+
+### event_list_info.m
+
+* Lists string information.
+* Obsolete.
+
+### event_lists.pl
+
+* Lists string information.
+* Obsolete.
+
+### excel2webobs.pl
+
+* Prints text that can be cut and paste into *Webobs* entry for each string.
+
+### fetchHelis.sh
+
+* Copies MSS1 helicorder plots and multi-station helicorder plots to current directory.
+* Usage fetchHelis.sh 20250101
+
+### station_info.m
+
+* Creates a plot showing station availability for all strings.
+* Uses data from *SeismicityDiary.xlsx*.
+
+## stringAnalysis
+
+Advanced analysis of VT strings.
+
+### analyseStrings.m
+
+* Creates various plots for a string.
+* Plots stored in *./plots* directory.
+
+### calcMoments.m
+
+* Calculates Seismic Moment for every string.
+* Results stored in */mnt/mvofls2/Seismic_Data/monitoring_data/megaplot2/fetchedVTstringsPlus.mat*.
+
+### calcVtRates.m, calcVtRatesPlot.m
+
+* Calculates and plots VT event rates before and after strings.
+
+### cumEventAmp
+
+Creates plots of cumulative event amplitude for each string.
+ 
+### listStrings.m, listStrings2.m
+
+* List string information.
+
+### plotStringStuff.m
+
+* Plots string information against time.
+ 
+### vtstringStats.m
+
+* Calculates and plots analysis of string meta-data.
+* Output in *vtstringStats.txt*.
+
+## stringsVgas
+
+Create plot of SO2 flux measurements for each string.
 
 ## Author
 
