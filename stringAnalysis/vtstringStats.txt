@@ -1,0 +1,182 @@
+17-Apr-2025 17:28:01
+
+
+Total stringy things              998
+Unclassified                       30
+distal RF string                    1
+Distal rockfall string              1
+Distal VT string                    2
+distal VT string                    3
+distal VT swarmette                 1
+Distal VT triplet                   1
+doublet or precursor                1
+Hybrid swarmette                    1
+LP string                           4
+LP/Hybrid string                    1
+mini RF string                      1
+mini rockfall string                1
+mini VT string                    197
+mini-string or burst                4
+mini-string or doublet              2
+Mixed swarmette                    44
+RF doublet                          1
+RF string                          18
+RF swarm                            3
+RF swarmette                        5
+RF triplet                          1
+RF/LP string                        5
+Rockfall string                     1
+Swarmette                          16
+Unknown                             1
+Unknown swarmette                   2
+VT doublet                         72
+VT doublet or string                1
+VT string                         489
+VT swarm                            5
+VT swarmette                       47
+VT triplet                         35
+VT/RF string                        1
+
+
+VT things                                  All              Strings          Mini-strings     Doublets         Triplets    
+number                                     793              489              197               72               35
+
+Associated with surface activity:           14 ( 2%)
+Maybe associated with surface activity:      0 ( 0%)
+
+Tested for repeating events:               308              200               55               36               17
+Have repeating events:                     108 (35%)         59 (30%)         15 (27%)         25 (69%)          9 (53%)
+Have some repeating events:                 19 ( 6%)         13 ( 7%)          4 ( 7%)          0 ( 0%)          2 (12%)
+
+Tested for form:                           375              202              101               51               21
+Largest event first:                        84 (22%)         44 (22%)          9 ( 9%)         22 (43%)          9 (43%)
+Largest event last:                         57 (15%)         17 ( 8%)         18 (18%)         19 (37%)          3 (14%)
+
+Test largest first:                         84               44                9               22                9
+Repeating events:                           24 (29%)         11 (25%)          2 (22%)          9 (41%)          2 (22%)
+
+Tested for non-VTs:                        759              466              190               68               35
+Contains only VTs:                         554 (73%)        312 (67%)        142 (75%)         66 (97%)         34 (97%)
+Contains rockfalls:                        108 (14%)         87 (19%)         20 (11%)          0 ( 0%)          1 ( 3%)
+Maybe contains rockfalls:                   79 (10%)         51 (11%)         26 (14%)          2 ( 3%)          0 ( 0%)
+Contains LPs:                               29 ( 4%)         28 ( 6%)          1 ( 1%)          0 ( 0%)          0 ( 0%)
+Maybe contains LPs:                         15 ( 2%)         12 ( 3%)          3 ( 2%)          0 ( 0%)          0 ( 0%)
+Contains hybrids:                            4 ( 1%)          4 ( 1%)          0 ( 0%)          0 ( 0%)          0 ( 0%)
+Maybe contains hybrids:                      2 ( 0%)          2 ( 0%)          0 ( 0%)          0 ( 0%)          0 ( 0%)
+
+
+VT strings:                                489
+
+Associated with surface activity:           14 ( 3%)
+Maybe associated with surface activity:      0 ( 0%)
+
+Tested for repetition:                     200
+Have repeating events:                      59 (30%)
+Have some repeating events:                 13 ( 7%)
+
+Tested for form:                           202
+Largest event first:                        44 (22%)
+Largest event last:                         17 ( 8%)
+
+Largest first, tested for repeating:        44
+Largest first, repeating:                   11 (25%)
+
+Tested for non-VTs:                        466
+Contains only VTs:                         312 (67%)
+Contains rockfalls:                         87 (19%)
+Maybe contains rockfalls:                   51 (11%)
+Contains LPs:                               28 ( 6%)
+Maybe contains LPs:                         12 ( 3%)
+Contains hybrids:                            4 ( 1%)
+Maybe contains hybrids:                      2 ( 0%)
+17-Apr-2025 17:28:28
+
+
+Total stringy things              998
+Unclassified                       30
+distal RF string                    1
+Distal rockfall string              1
+Distal VT string                    2
+distal VT string                    3
+distal VT swarmette                 1
+Distal VT triplet                   1
+doublet or precursor                1
+Hybrid swarmette                    1
+LP string                           4
+LP/Hybrid string                    1
+mini RF string                      1
+mini rockfall string                1
+mini VT string                    197
+mini-string or burst                4
+mini-string or doublet              2
+Mixed swarmette                    44
+RF doublet                          1
+RF string                          18
+RF swarm                            3
+RF swarmette                        5
+RF triplet                          1
+RF/LP string                        5
+Rockfall string                     1
+Swarmette                          16
+Unknown                             1
+Unknown swarmette                   2
+VT doublet                         72
+VT doublet or string                1
+VT string                         489
+VT swarm                            5
+VT swarmette                       47
+VT triplet                         35
+VT/RF string                        1
+
+
+VT things                                  All              Strings          Mini-strings     Doublets         Triplets    
+number                                     793              489              197               72               35
+
+Associated with surface activity:           14 ( 2%)
+Maybe associated with surface activity:      0 ( 0%)
+
+Tested for repeating events:               308              200               55               36               17
+Have repeating events:                     108 (35%)         59 (30%)         15 (27%)         25 (69%)          9 (53%)
+Have some repeating events:                 19 ( 6%)         13 ( 7%)          4 ( 7%)          0 ( 0%)          2 (12%)
+
+Tested for form:                           375              202              101               51               21
+Largest event first:                        84 (22%)         44 (22%)          9 ( 9%)         22 (43%)          9 (43%)
+Largest event last:                         57 (15%)         17 ( 8%)         18 (18%)         19 (37%)          3 (14%)
+
+Test largest first:                         84               44                9               22                9
+Repeating events:                           24 (29%)         11 (25%)          2 (22%)          9 (41%)          2 (22%)
+
+Tested for non-VTs:                        759              466              190               68               35
+Contains only VTs:                         554 (73%)        312 (67%)        142 (75%)         66 (97%)         34 (97%)
+Contains rockfalls:                        108 (14%)         87 (19%)         20 (11%)          0 ( 0%)          1 ( 3%)
+Maybe contains rockfalls:                   79 (10%)         51 (11%)         26 (14%)          2 ( 3%)          0 ( 0%)
+Contains LPs:                               29 ( 4%)         28 ( 6%)          1 ( 1%)          0 ( 0%)          0 ( 0%)
+Maybe contains LPs:                         15 ( 2%)         12 ( 3%)          3 ( 2%)          0 ( 0%)          0 ( 0%)
+Contains hybrids:                            4 ( 1%)          4 ( 1%)          0 ( 0%)          0 ( 0%)          0 ( 0%)
+Maybe contains hybrids:                      2 ( 0%)          2 ( 0%)          0 ( 0%)          0 ( 0%)          0 ( 0%)
+
+
+VT strings:                                489
+
+Associated with surface activity:           14 ( 3%)
+Maybe associated with surface activity:      0 ( 0%)
+
+Tested for repetition:                     200
+Have repeating events:                      59 (30%)
+Have some repeating events:                 13 ( 7%)
+
+Tested for form:                           202
+Largest event first:                        44 (22%)
+Largest event last:                         17 ( 8%)
+
+Largest first, tested for repeating:        44
+Largest first, repeating:                   11 (25%)
+
+Tested for non-VTs:                        466
+Contains only VTs:                         312 (67%)
+Contains rockfalls:                         87 (19%)
+Maybe contains rockfalls:                   51 (11%)
+Contains LPs:                               28 ( 6%)
+Maybe contains LPs:                         12 ( 3%)
+Contains hybrids:                            4 ( 1%)
+Maybe contains hybrids:                      2 ( 0%)

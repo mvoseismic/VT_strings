@@ -1,0 +1,13 @@
+0-old/
+0-old-Seismic_bursts/
+20*/
+data/
+doc/
+docs/
+figs/
+plot/old/
+processing_notes.txt
+references/
+stringAnalysis/plots/
+stringAnalysis/stringAnalysis-old/
+*.png

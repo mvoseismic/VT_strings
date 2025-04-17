@@ -1,0 +1,142 @@
+%2d          1   -20s  1.200000e+05
+%2d         83   -20s  tart
+%2d         50   -20s  024-01-19 09:22:56:   SwapUse         973 CachUse        2547  MemUse        9716 MemFree       19811
+%2d          1   -20s  1.200000e+05
+%2d         67   -20s  WT calculated
+%2d         50   -20s  024-01-19 09:22:57:   SwapUse         973 CachUse        2565  MemUse       10204 MemFree       19308
+[Warning: MATLAB has disabled some advanced graphics rendering features by switching to software OpenGL. For more information, click
+<a href="matlab:opengl('problems')">here</a>.] 
+%2d          1   -20s  1.200000e+05
+%2d         67   -20s  WT plotted
+%2d         50   -20s  024-01-19 09:22:59:   SwapUse         973 CachUse        2574  MemUse       10247 MemFree       19254
+%2d          1   -20s  1.320000e+05
+%2d         83   -20s  tart
+%2d         50   -20s  024-01-19 09:22:59:   SwapUse         973 CachUse        2576  MemUse       10265 MemFree       19236
+%2d          1   -20s  1.320000e+05
+%2d         67   -20s  WT calculated
+%2d         50   -20s  024-01-19 09:23:00:   SwapUse         973 CachUse        2576  MemUse       10325 MemFree       19175
+%2d          1   -20s  1.320000e+05
+%2d         67   -20s  WT plotted
+%2d         50   -20s  024-01-19 09:23:00:   SwapUse         973 CachUse        2576  MemUse       10318 MemFree       19182
+%2d          1   -20s  1.440000e+05
+%2d         83   -20s  tart
+%2d         50   -20s  024-01-19 09:23:00:   SwapUse         973 CachUse        2576  MemUse       10318 MemFree       19182
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('wavelet.internal.cwt.morsebpfilters')" style="font-weight:bold">wavelet.internal.cwt.morsebpfilters</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cwtfilterbank/filterbank', '/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/@cwtfilterbank/cwtfilterbank.m', 937)" style="font-weight:bold">cwtfilterbank/filterbank</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/@cwtfilterbank/cwtfilterbank.m',937,0)">line 937</a>)
+                [psidft,f] = wavelet.internal.cwt.morsebpfilters(...
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cwtfilterbank', '/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/@cwtfilterbank/cwtfilterbank.m', 226)" style="font-weight:bold">cwtfilterbank</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/@cwtfilterbank/cwtfilterbank.m',226,0)">line 226</a>)
+            [psidft,f] = self.filterbank();
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cwt>constructFilterBank', '/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/cwt.m', 1104)" style="font-weight:bold">cwt>constructFilterBank</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/cwt.m',1104,0)">line 1104</a>)
+fb = cwtfilterbank(fbcell{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cwt', '/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/cwt.m', 298)" style="font-weight:bold">cwt</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/cwt.m',298,0)">line 298</a>)
+    fb = constructFilterBank(fbcell);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('testMemCwt', '/home/seisan/Dropbox/STUFF/projectsMVO/Seismicity/VT_strings/stringAnalysis/testMemCwt.m', 17)" style="font-weight:bold">testMemCwt</a> (<a href="matlab: opentoline('/home/seisan/Dropbox/STUFF/projectsMVO/Seismicity/VT_strings/stringAnalysis/testMemCwt.m',17,0)">line 17</a>)
+    [wt,f] = cwt(y,100.0);
+} 
+testMemCwt
+ 1     120000   -20s  Start
+50         48   -20s  24-01-19 09:24:08:   SwapUse         972 CachUse        2628  MemUse        9971 MemFree       19474
+ 1     120000   -20s  CWT calculated
+50         48   -20s  24-01-19 09:24:08:   SwapUse         972 CachUse        2628  MemUse       10368 MemFree       19078
+ 1     120000   -20s  CWT plotted
+50         48   -20s  24-01-19 09:24:08:   SwapUse         972 CachUse        2628  MemUse       10352 MemFree       19094
+ 1     132000   -20s  Start
+50         48   -20s  24-01-19 09:24:09:   SwapUse         972 CachUse        2628  MemUse       10352 MemFree       19093
+ 1     132000   -20s  CWT calculated
+50         48   -20s  24-01-19 09:24:09:   SwapUse         972 CachUse        2628  MemUse       10405 MemFree       19040
+ 1     132000   -20s  CWT plotted
+50         48   -20s  24-01-19 09:24:09:   SwapUse         972 CachUse        2628  MemUse       10402 MemFree       19043
+ 1     144000   -20s  Start
+50         48   -20s  24-01-19 09:24:09:   SwapUse         972 CachUse        2628  MemUse       10402 MemFree       19043
+ 1     144000   -20s  CWT calculated
+50         48   -20s  24-01-19 09:24:10:   SwapUse         972 CachUse        2629  MemUse       10464 MemFree       18981
+ 1     144000   -20s  CWT plotted
+50         48   -20s  24-01-19 09:24:10:   SwapUse         972 CachUse        2629  MemUse       10474 MemFree       18971
+ 1     156000   -20s  Start
+50         48   -20s  24-01-19 09:24:10:   SwapUse         972 CachUse        2629  MemUse       10474 MemFree       18971
+ 1     156000   -20s  CWT calculated
+50         48   -20s  24-01-19 09:24:11:   SwapUse         972 CachUse        2629  MemUse       10454 MemFree       18991
+ 1     156000   -20s  CWT plotted
+50         48   -20s  24-01-19 09:24:11:   SwapUse         972 CachUse        2629  MemUse       10446 MemFree       18999
+ 1     168000   -20s  Start
+50         48   -20s  24-01-19 09:24:11:   SwapUse         972 CachUse        2629  MemUse       10446 MemFree       18999
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cwtfilterbank/wt')" style="font-weight:bold">cwtfilterbank/wt</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cwt', '/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/cwt.m', 304)" style="font-weight:bold">cwt</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/cwt.m',304,0)">line 304</a>)
+    [cfs,freq,coitmp] = fb.wt(x);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('testMemCwt', '/home/seisan/Dropbox/STUFF/projectsMVO/Seismicity/VT_strings/stringAnalysis/testMemCwt.m', 19)" style="font-weight:bold">testMemCwt</a> (<a href="matlab: opentoline('/home/seisan/Dropbox/STUFF/projectsMVO/Seismicity/VT_strings/stringAnalysis/testMemCwt.m',19,0)">line 19</a>)
+    [wt,f] = cwt(y,100.0);
+} 
+testMemCwt
+10     120000   Start                 2024-01-19 09:27:48:   SwapUse         972 CachUse        2649  MemUse       10091 MemFree       19338
+10     120000   CWT calculated        2024-01-19 09:27:48:   SwapUse         972 CachUse        2649  MemUse       10448 MemFree       18981
+10     120000   CWT plotted           2024-01-19 09:27:48:   SwapUse         972 CachUse        2649  MemUse       10444 MemFree       18985
+11     132000   Start                 2024-01-19 09:27:48:   SwapUse         972 CachUse        2649  MemUse       10444 MemFree       18985
+11     132000   CWT calculated        2024-01-19 09:27:49:   SwapUse         972 CachUse        2649  MemUse       10484 MemFree       18945
+11     132000   CWT plotted           2024-01-19 09:27:49:   SwapUse         972 CachUse        2649  MemUse       10488 MemFree       18941
+12     144000   Start                 2024-01-19 09:27:49:   SwapUse         972 CachUse        2649  MemUse       10488 MemFree       18941
+12     144000   CWT calculated        2024-01-19 09:27:50:   SwapUse         972 CachUse        2650  MemUse       10570 MemFree       18859
+12     144000   CWT plotted           2024-01-19 09:27:50:   SwapUse         972 CachUse        2649  MemUse       10569 MemFree       18860
+13     156000   Start                 2024-01-19 09:27:50:   SwapUse         972 CachUse        2649  MemUse       10569 MemFree       18860
+13     156000   CWT calculated        2024-01-19 09:27:51:   SwapUse         972 CachUse        2647  MemUse       10660 MemFree       18768
+13     156000   CWT plotted           2024-01-19 09:27:51:   SwapUse         972 CachUse        2647  MemUse       10658 MemFree       18771
+14     168000   Start                 2024-01-19 09:27:51:   SwapUse         972 CachUse        2647  MemUse       10658 MemFree       18771
+14     168000   CWT calculated        2024-01-19 09:27:52:   SwapUse         972 CachUse        2647  MemUse       10653 MemFree       18776
+14     168000   CWT plotted           2024-01-19 09:27:52:   SwapUse         972 CachUse        2647  MemUse       10647 MemFree       18781
+15     180000   Start                 2024-01-19 09:27:52:   SwapUse         972 CachUse        2647  MemUse       10647 MemFree       18781
+15     180000   CWT calculated        2024-01-19 09:27:53:   SwapUse         972 CachUse        2648  MemUse       10714 MemFree       18714
+15     180000   CWT plotted           2024-01-19 09:27:53:   SwapUse         972 CachUse        2648  MemUse       10719 MemFree       18708
+16     192000   Start                 2024-01-19 09:27:53:   SwapUse         972 CachUse        2648  MemUse       10719 MemFree       18708
+16     192000   CWT calculated        2024-01-19 09:27:54:   SwapUse         972 CachUse        2648  MemUse       10757 MemFree       18671
+16     192000   CWT plotted           2024-01-19 09:27:54:   SwapUse         972 CachUse        2648  MemUse       10763 MemFree       18665
+17     204000   Start                 2024-01-19 09:27:54:   SwapUse         972 CachUse        2648  MemUse       10763 MemFree       18665
+17     204000   CWT calculated        2024-01-19 09:27:55:   SwapUse         972 CachUse        2648  MemUse       10822 MemFree       18606
+17     204000   CWT plotted           2024-01-19 09:27:55:   SwapUse         972 CachUse        2648  MemUse       10819 MemFree       18608
+18     216000   Start                 2024-01-19 09:27:55:   SwapUse         972 CachUse        2648  MemUse       10819 MemFree       18608
+18     216000   CWT calculated        2024-01-19 09:27:57:   SwapUse         972 CachUse        2649  MemUse       10864 MemFree       18563
+18     216000   CWT plotted           2024-01-19 09:27:57:   SwapUse         972 CachUse        2649  MemUse       10867 MemFree       18560
+19     228000   Start                 2024-01-19 09:27:57:   SwapUse         972 CachUse        2649  MemUse       10868 MemFree       18559
+19     228000   CWT calculated        2024-01-19 09:27:58:   SwapUse         972 CachUse        2649  MemUse       10932 MemFree       18495
+19     228000   CWT plotted           2024-01-19 09:27:58:   SwapUse         972 CachUse        2649  MemUse       10931 MemFree       18496
+20     240000   Start                 2024-01-19 09:27:58:   SwapUse         972 CachUse        2649  MemUse       10931 MemFree       18495
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cwtfilterbank/wt')" style="font-weight:bold">cwtfilterbank/wt</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cwt', '/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/cwt.m', 304)" style="font-weight:bold">cwt</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2023b/toolbox/wavelet/wavelet/cwt.m',304,0)">line 304</a>)
+    [cfs,freq,coitmp] = fb.wt(x);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('testMemCwt', '/home/seisan/Dropbox/STUFF/projectsMVO/Seismicity/VT_strings/stringAnalysis/testMemCwt.m', 19)" style="font-weight:bold">testMemCwt</a> (<a href="matlab: opentoline('/home/seisan/Dropbox/STUFF/projectsMVO/Seismicity/VT_strings/stringAnalysis/testMemCwt.m',19,0)">line 19</a>)
+    [wt,f] = cwt(y,100.0);
+} 
+testMemCwt
+15     180000   Start                 2024-01-19 09:28:27:   SwapUse         972 CachUse        2658  MemUse       10157 MemFree       19263
+15     180000   CWT calculated        2024-01-19 09:28:28:   SwapUse         972 CachUse        2658  MemUse       10703 MemFree       18717
+15     180000   CWT plotted           2024-01-19 09:28:28:   SwapUse         972 CachUse        2658  MemUse       10701 MemFree       18719
+20     240000   Start                 2024-01-19 09:36:44:   SwapUse         972 CachUse        2994  MemUse       13061 MemFree       16024
+20     240000   CWT calculated        2024-01-19 09:36:46:   SwapUse         972 CachUse        2994  MemUse       13945 MemFree       15139
+20     240000   CWT plotted           2024-01-19 09:36:46:   SwapUse         972 CachUse        2994  MemUse       13935 MemFree       15149
+16     192000   Start                 2024-01-19 10:37:19:   SwapUse         961 CachUse        3804  MemUse       10035 MemFree       18239
+16     192000   CWT calculated        2024-01-19 10:37:21:   SwapUse         961 CachUse        3804  MemUse       10814 MemFree       17459
+[Warning: MATLAB has disabled some advanced graphics rendering features by switching to software OpenGL. For more information, click
+<a href="matlab:opengl('problems')">here</a>.] 
+16     192000   CWT plotted           2024-01-19 10:37:22:   SwapUse         961 CachUse        3804  MemUse       10834 MemFree       17439
+16     192000   Start                 2024-01-19 11:08:43:   SwapUse         960 CachUse        4085  MemUse       13504 MemFree       14491
+16     192000   CWT calculated        2024-01-19 11:08:44:   SwapUse         960 CachUse        4085  MemUse       14262 MemFree       13733
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mesh')" style="font-weight:bold">mesh</a>
+Data dimensions must agree.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('testMemCwt', '/home/seisan/Dropbox/STUFF/projectsMVO/Seismicity/VT_strings/stringAnalysis/testMemCwt.m', 28)" style="font-weight:bold">testMemCwt</a> (<a href="matlab: opentoline('/home/seisan/Dropbox/STUFF/projectsMVO/Seismicity/VT_strings/stringAnalysis/testMemCwt.m',28,0)">line 28</a>)
+    mesh(t0,f,sdb);
+} 
+testMemCwt
+16     192000   Start                 2024-01-19 11:09:20:   SwapUse         960 CachUse        4091  MemUse       13639 MemFree       14353
+16     192000   CWT calculated        2024-01-19 11:09:21:   SwapUse         960 CachUse        4090  MemUse       14296 MemFree       13696
+16     192000   CWT plotted           2024-01-19 11:09:22:   SwapUse         960 CachUse        4091  MemUse       14108 MemFree       13884
