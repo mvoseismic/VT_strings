@@ -72,6 +72,11 @@ Basic analysis of VT strings.
 ### excel2webobs.pl
 
 * Prints text that can be cut and paste into *Webobs* entry for each string.
+* Usage:
+```
+$ ./excel2webobs.pl 2> /dev/null
+```
+
 
 ### fetchHelis.sh
 
