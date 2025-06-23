@@ -1009,7 +1009,7 @@ if nplot == 1 || nplot == 7
     plotOverTitle( overTitle );
     filePlot = append( id(nString), '--', what(nString), '-analysis_06-cumulativeeventamp.png' );
     filePlot = regexprep(filePlot, ' +', '_');
-    filePlot = fullfile( './plots', filePlot );
+    filePlot = fullfile( './analyseStringsPlots/v1', filePlot );
     saveas( gcf, filePlot );
     if ~showPlot
         close( gcf );

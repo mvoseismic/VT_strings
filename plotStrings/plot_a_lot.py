@@ -52,6 +52,7 @@ def main():
             st2 += st.select( station="MSUH", channel="SHZ", sampling_rate=100 )
             st2 += st.select( station="MSS1", channel="SHZ", sampling_rate=100 )
             st2 += st.select( station="MBFR", channel="BH*", sampling_rate=100 )
+            st2 += st.select( station="MBFR", channel="HH*", sampling_rate=200 )
             st2 += st.select( station="MBLG", channel="BH*", sampling_rate=100 )
             st2 += st.select( station="MBLG", channel="HH*", sampling_rate=200 )
             st2 += st.select( station="MBLY", channel="BH*", sampling_rate=100 )
