@@ -21,14 +21,14 @@ idString = stringId( idWant );
 
 
 % Get traverse SO2
-load('~/projects/megaplot/data/gas/gas_so2_traverse.mat');
+load('~/src/megaplot/data/gas/gas_so2_traverse.mat');
 datimGasTrav = gas_dates;
 dataGasTrav = gas_so2_trav;
 errGasTrav = gas_err;
 datetimeGasTrav = datetime(datimGasTrav,'ConvertFrom','datenum')';
 
 % Get DOAS SO2
-load( '~/projects/megaplot/data/gas/gas_so2_auto' );
+load( '~/src/megaplot/data/gas/gas_so2_auto' );
 gdata = get( gas_so2, 'Data' );
 tdata = get( gas_so2, 'Time' );
 tstart = datenum( gas_so2.TimeInfo.StartDate );
@@ -76,16 +76,16 @@ for iString = 1:nStrings
     idWant = datetimeGasTrav >= dtBeg & datetimeGasTrav <= dtEnd;
     if sum(idWant) > 0
         errorbar( datetimeGasTrav(idWant), dataGasTrav(idWant), errGasTrav(idWant), ...
-            'o', 'MarkerFaceColor', 'c', 'MarkerEdgeColor', 'k', 'MarkerSize', 8, ...
+            'o', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k', 'MarkerSize', 6, ...
             'DisplayName', 'Traverse' );
     end
     idWant = datetimeGas >= dtBeg & datetimeGas <= dtEnd;
     if sum(idWant) > 0
         plot( datetimeGas(idWant), dataGas(idWant), ...
-            'o', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k', 'MarkerSize', 6, ...
+            'o', 'MarkerFaceColor', 'c', 'MarkerEdgeColor', 'k', 'MarkerSize', 4, ...
             'DisplayName', 'DOAS' );
     end
-    %xline( datetimeThisString, 'Color', darkBlue, 'LineWidth', 1, 'LineStyle', '--', 'HandleVisibility','off' );
+    xline( datetimeThisString, 'Color', darkRed, 'LineWidth', 1, 'LineStyle', '--', 'HandleVisibility','off' );
     xlim( tLimits );
     ylabel( 'SO_{2} flux' );
     yLimits = ylim;
@@ -99,9 +99,11 @@ for iString = 1:nStrings
 
     yyaxis right;
     idWant = datetimeString >= dtBeg & datetimeString <= dtEnd;
-    stem( datetimeString(idWant), dataString(idWant), 'o', 'MarkerFaceColor', 'r', 'MarkerEdgeColor', 'k', ...
+%    stem( datetimeString(idWant), dataString(idWant), 'o', 'MarkerFaceColor', 'r', 'MarkerEdgeColor', 'k', ...
+%        'LineWidth', 1, 'MarkerSize', 6, 'Color', 'r', 'LineStyle', '-', 'HandleVisibility','off' );
+    stairs( datetimeString(idWant), cumsum(dataString(idWant)), 'o-', 'MarkerFaceColor', 'r', 'MarkerEdgeColor', 'k', ...
         'LineWidth', 1, 'MarkerSize', 6, 'Color', 'r', 'LineStyle', '-', 'HandleVisibility','off' );
-    ylabel( 'String Moment' );
+    ylabel( 'Cumulative String Moment' );
     %set(gca, 'YScale', 'log');   
     xlim( tLimits );
 %    ylim( [1.0e+12 3.0e+15] );

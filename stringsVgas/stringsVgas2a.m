@@ -54,7 +54,7 @@ daysAft = 120;
 
 
 figure;
-figure_size('p',1800);
+figure_size('l',1800);
 tiledlayout( 'vertical' );
 
 
@@ -74,9 +74,10 @@ for iString = 1:2
     dtEnd = datetimeThisString + days( daysAft );
     tLimits = [dtBeg dtEnd];
 
-    idWant = datetimeString >= dtBeg & datetimeString <= dtEnd;
+    yyaxis right;
+    idWant = dataString >= 1.0e15;
     stem( datetimeString(idWant), dataString(idWant), 'o', 'MarkerFaceColor', 'r', 'MarkerEdgeColor', 'k', ...
-        'LineWidth', 1, 'MarkerSize', 6, 'Color', 'r', 'LineStyle', '-', 'HandleVisibility','off' );
+        'LineWidth', 2, 'MarkerSize', 12, 'Color', 'r', 'LineStyle', '-', 'HandleVisibility','off' );
     ylabel( 'Total String Moment (Nm)' );
     xlim( tLimits );
     ylim( [0 3.0e+15] );
@@ -84,21 +85,20 @@ for iString = 1:2
     grid on;
     title( idThisString );
 
-
-    nexttile;
+    yyaxis left;
 
     hold on;
     idWant = datetimeGasTrav >= dtBeg & datetimeGasTrav <= dtEnd;
     if sum(idWant) > 0
         errorbar( datetimeGasTrav(idWant), dataGasTrav(idWant), errGasTrav(idWant), ...
-            'o', 'MarkerFaceColor', 'm', 'MarkerEdgeColor', 'k', 'MarkerSize', 6, ...
+            'o', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k', 'MarkerSize', 6, ...
             'DisplayName', 'Traverse' );
     end
 
     idWant = datetimeGas >= dtBeg & datetimeGas <= dtEnd;
     if sum(idWant) > 0
         plot( datetimeGas(idWant), dataGas(idWant), ...
-            'o', 'MarkerFaceColor', 'c', 'MarkerEdgeColor', 'k', 'MarkerSize', 6, ...
+            'o', 'MarkerFaceColor', 'c', 'MarkerEdgeColor', 'k', 'MarkerSize', 4, ...
             'DisplayName', 'DOAS' );
     end
 

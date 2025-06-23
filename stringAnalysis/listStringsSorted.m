@@ -15,6 +15,8 @@ vtstrings = vtstrings( idWant,:);
 
 ns = height( vtstrings );
 
+% Sort
+vtstrings = sortrows( vtstrings, 10 );
 
 fprintf( "%4s  %-13s  %-22s %8s   %4s  %4s  %4s  %4s  %3s    %7s   %7s   %3s  %3s  %8s  %3s  %4s  %4s\n", ...
     "N", "ID", "What", "Dur(m)", "nTot", "nLoc", "nM>2", "nM>3", "ML", "Moment", "MomRate", ...

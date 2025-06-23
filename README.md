@@ -110,7 +110,7 @@ Advanced analysis of VT strings.
 
 Creates plots of cumulative event amplitude for each string.
  
-### listStrings.m, listStrings2.m
+### listStrings.m, listStrings2.m, listStringsSorted.m
 
 * List string information.
 
