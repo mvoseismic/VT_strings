@@ -336,7 +336,7 @@ fprintf( "Plot 1\n" );
 
     overTitle = append( id(nString), '    ', what(nString), '    Filtered Verticals (except MSS1)' );
     plotOverTitle( overTitle );
-    filePlot = append( id(nString), '--', what(nString), '-analysis_01-filtered_verticals.png' );
+    filePlot = append( id(nString), '--', what(nString), '-analyseStrings2-01-filtered_verticals.png' );
     filePlot = regexprep(filePlot, ' +', '_');
     filePlot = fullfile( './analyseStringsPlots/v2', filePlot );
     saveas( gcf, filePlot );
@@ -519,7 +519,7 @@ fprintf( "Plot 2\n" );
         
     overTitle = append( id(nString), '    ', what(nString), '    Spectrograms' );
     plotOverTitle( overTitle );
-    filePlot = append( id(nString), '--', what(nString), '-analysis_02-spectrograms.png' );
+    filePlot = append( id(nString), '--', what(nString), '-analyseStrings2-02-spectrograms.png' );
     filePlot = regexprep(filePlot, ' +', '_');
     filePlot = fullfile( './analyseStringsPlots/v2', filePlot );
     saveas( gcf, filePlot );
@@ -738,7 +738,7 @@ fprintf( "Plot 2\n" );
         end
         scnl = append( id(nString), '    ', what(nString), '    ', scnl );
         plotOverTitle( scnl );
-        filePlot = append( id(nString), '--', what(nString), '-analysis_03_', sprintf("%s",string(sta)), '.png' );
+        filePlot = append( id(nString), '--', what(nString), '-analyseStrings2-', sprintf("%02d-%s",ista+2,string(sta)), '.png' );
         filePlot = regexprep(filePlot, ' +', '_');
         filePlot = fullfile( './analyseStringsPlots/v2', filePlot );
         saveas( gcf, filePlot );
@@ -751,9 +751,6 @@ fprintf( "Plot 2\n" );
     end
    
 
-
-
-fprintf( "\n");
 
 warning('on','all');
 

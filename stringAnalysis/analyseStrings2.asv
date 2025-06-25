@@ -139,41 +139,41 @@ signalStruct = ReadMSEEDFast( fileMseed );
 stations = [];
 signalTable = struct2table( signalStruct );
 if sum( strcmp(signalTable.station,'MSS1') )
-    stations = [stations; cellstr('MSS1' ];
+    stations = [stations; cellstr('MSS1') ];
 elseif sum( strcmp(signalTable.station,'MBFR') )
-    stations = [stations; cellstr('MBFR' ];
+    stations = [stations; cellstr('MBFR') ];
 end
 if sum( strcmp(signalTable.station,'MBLG') )
-    stations = [stations; cellstr('MBLG' ];
+    stations = [stations; cellstr('MBLG') ];
 elseif sum( strcmp(signalTable.station,'MBLY') )
-    stations = [stations; cellstr('MBLY' ];
+    stations = [stations; cellstr('MBLY') ];
 end
 if sum( strcmp(signalTable.station,'MBBY') )
-    stations = [stations; cellstr('MBBY' ];
+    stations = [stations; cellstr('MBBY') ];
 elseif sum( strcmp(signalTable.station,'MBRY') )
-    stations = [stations; cellstr('MBRY' ];
+    stations = [stations; cellstr('MBRY') ];
 end
 nstations = length( stations );
 if nstations < 3
     if sum( strcmp(signalTable.station,'MBGH') )
-        stations = [stations; cellstr('MBGH' ];
+        stations = [stations; cellstr('MBGH') ];
     elseif sum( strcmp(signalTable.station,'MBWH') )
-        stations = [stations; cellstr('MBWH' ];
+        stations = [stations; cellstr('MBWH') ];
     elseif sum( strcmp(signalTable.station,'MBGB') )
-        stations = [stations; cellstr('MBGB' ];
+        stations = [stations; cellstr('MBGB') ];
     elseif sum( strcmp(signalTable.station,'MBFL') )
-        stations = [stations; 'MBFL' ];
+        stations = [stations; cellstr('MBFL') ];
     end
 end
 if nstations < 3
     if sum( strcmp(signalTable.station,'MBGH') )
-        stations = [stations; 'MBGH' ];
+        stations = [stations; cellstr('MBGH') ];
     elseif sum( strcmp(signalTable.station,'MBWH') )
-        stations = [stations; 'MBWH' ];
+        stations = [stations; cellstr('MBWH') ];
     elseif sum( strcmp(signalTable.station,'MBGB') )
-        stations = [stations; 'MBGB' ];
+        stations = [stations; cellstr('MBGB') ];
     elseif sum( strcmp(signalTable.station,'MBFL') )
-        stations = [stations; 'MBFL' ];
+        stations = [stations; cellstr('MBFL') ];
     end
 end
 nstations = length( stations );
@@ -275,6 +275,9 @@ end
 
 clear signalStruct;
 
+
+% PLOT 1
+fprintf( "Plot 1\n" );
 % Plot filtered verticals
     if showPlot
         figure;
@@ -341,6 +344,9 @@ clear signalStruct;
         close( gcf );
     end
 
+
+% PLOT 2
+fprintf( "Plot 2\n" );
 % Plot spectrograms
 
     if showPlot
@@ -521,11 +527,230 @@ clear signalStruct;
         close( gcf );
     end
 
+
+    % PLOTS 3
+    for ista = 1:nstations
+        fprintf( "Plot %d\n", ista+2 );
+
+        switch ista
+            case 1
+                data = dataSta1;
+                fdata = fdataSta1;
+                sdata = sdataSta1;
+                datim = datimSta1;
+                scnl = scnlSta1;
+                fs = fsSta1;
+            case 2
+                data = dataSta2;
+                fdata = fdataSta2;
+                sdata = sdataSta2;
+                datim = datimSta2;
+                scnl = scnlSta2;
+                fs = fsSta2;
+            case 3
+                data = dataSta3;
+                fdata = fdataSta3;
+                sdata = sdataSta3;
+                datim = datimSta3;
+                scnl = scnlSta3;
+                fs = fsSta3;
+        end
+
+        if fs == 0 
+            fprintf( "FS = 0 for %s\n", sta );
+            continue
+        end
+
+        sta = stations(ista);
+
+        % Max data
+        dataMax = max( abs( fdata ) );
+
+
+        if showPlot
+            figure;
+        else
+            figure( 'Visible', 'off' );
+        end
+        figure_size( 'l' );
+        t = tiledlayout(3,1);
+
+        ax1 = nexttile(1);
+        plot(datim,fdata);
+        ylim( [-1.1*dataMax 1.1*dataMax] );
+        xlim( [datimBegPlot0 datimEndPlot0] );
+        set(gca,'TickDir','out');
+        if ~strcmp( sta, 'MSS1' ) 
+            tit = sprintf( "Filtered seismogram %3.1fHz high-pass", fc );
+        else
+            tit = 'Unfiltered seismogram';
+        end
+        title( tit );
+        set( gca, 'TitleHorizontalAlignment', 'left' ); 
+        set( gca, 'YTickLabels', {} );
+        box on;
+        grid on;
+
+        hold on;
+        yLimits = ylim;
+        y4 = yLimits(2);
+        y3 = yLimits(1) + 0.95 * ( yLimits(2) - yLimits(1) );
+        y2 = yLimits(1) + 0.05 * ( yLimits(2) - yLimits(1) );
+        y1 = yLimits(1);
+        idWant = strcmp( typeEvents, 'VT' );
+
+        D = datimEvents( idWant );
+        if length(D) > 0
+            N = numel(D);
+            X_plot = [D'; D'; NaN(1,N); D'; D'; NaN(1,N)];
+            Y_plot = repmat([y1; y2; NaN; y3; y4; NaN],1,N);
+            plot(X_plot(:),Y_plot(:), '-', 'LineWidth', 0.1, 'Color', darkRed );
+        end
+        D = datimEvents( ~idWant );
+        if length(D) > 0
+            N = numel(D);
+            X_plot = [D'; D'; NaN(1,N); D'; D'; NaN(1,N)];
+            Y_plot = repmat([y1; y2; NaN; y3; y4; NaN],1,N);
+            plot(X_plot(:),Y_plot(:), '-', 'LineWidth', 0.1, 'Color', darkGreen );
+        end
+        legend( '', 'VT', 'non-VT', 'Location', 'northeast' );
+
+
+        % Envelope
+        hdata = abs( hilbert( fdata ) );
+        if fs == 200
+            nwin = 201;
+        else
+            nwin = 101;
+        end
+        hdata = nan_rmedian( hdata, nwin );
+
+        ax2 = nexttile(2);
+        plot(datim,hdata);
+        xlim( [datimBegPlot0 datimEndPlot0] );
+        set(gca,'TickDir','out');
+        title( 'Smoothed envelope' );
+        set( gca, 'TitleHorizontalAlignment', 'left' ); 
+        set(gca, 'YScale', 'log')
+        grid on;
+        box on;
+
+        hold on;
+        yLimits = ylim;
+        y4 = yLimits(2);
+        y3 = 10^( log10(yLimits(1)) + ( 0.9 * ( log10(yLimits(2)) - log10(yLimits(1)) ) ) );
+        y2 = 10^( log10(yLimits(1)) + ( 0.1 * ( log10(yLimits(2)) - log10(yLimits(1)) ) ) );
+        y1 = yLimits(1);
+        idWant = strcmp( typeEvents, 'VT' );
+
+        D = datimEvents( idWant );
+        if length(D) > 0
+            N = numel(D);
+            X_plot = [D'; D'; NaN(1,N); D'; D'; NaN(1,N)];
+            Y_plot = repmat([y1; y2; NaN; y3; y4; NaN],1,N);
+            plot(X_plot(:),Y_plot(:), 'r-', 'LineWidth', 0.1, 'Color', darkRed );
+        end
+        D = datimEvents( ~idWant );
+        if length(D) > 0
+            N = numel(D);
+            X_plot = [D'; D'; NaN(1,N); D'; D'; NaN(1,N)];
+            Y_plot = repmat([y1; y2; NaN; y3; y4; NaN],1,N);
+            plot(X_plot(:),Y_plot(:), 'g-', 'LineWidth', 0.1, 'Color', darkGreen );
+        end
+        legend( '', 'VT', 'non-VT', 'Location', 'northeast' );
+
+
+        % Spectrogram
+        if length( fdata ) > 1
+            % cwt
+
+            % Wavelet transform
+            [wt,f] = cwt(sdata,fs);
+            sdb = abs(wt);
+            sdb = log( sdb );
+            t0 = (0:numel(data)-1)/fs;
+            t0 = t0/60 + datim0(1);
+            tit = 'Continuous wavelet transform (variable gain)';
+            clear wt;
+
+            % Decimation of cwt matrix
+            if numel( sdata) > 1000000
+                nDecimate = 1000;
+            elseif numel( sdata) > 500000
+                nDecimate = 100;
+            else
+                nDecimate = 10;
+            end
+            sdb = decimateArray( sdb, nDecimate );
+            t0 = decimate( t0, nDecimate );
+
+        else
+            % spectrogram
+
+            [s,f,t] = stft( fdata, sampleRate,'FrequencyRange','onesided' );
+            sdb = mag2db(abs(s));
+            t0 = t/60 + datim0(1);
+            tit = 'Short-time fourier transform';
+            clear s;
+
+        end
+    
+        ax1 = nexttile(3);
+        mesh(t0,f,sdb);
+        colormap jet;
+        view(2);
+        axis tight;
+        set( gca, 'YScale', 'log' );
+        set(gca,'TickDir','out');
+        xlim( [datimBegPlot0 datimEndPlot0] );
+        ylim( [1 100] );
+        clim( [0 max(max(sdb))] );
+        ylabel( 'Hz' );
+        title( tit );
+        set( gca, 'TitleHorizontalAlignment', 'left' ); 
+        grid off;
+        box on;
+
+        hold on;
+        yLimits = ylim;
+        y4 = yLimits(2);
+        y3 = 10^( log10(yLimits(1)) + ( 0.9 * ( log10(yLimits(2)) - log10(yLimits(1)) ) ) );
+        idWant = strcmp( typeEvents, 'VT' );
+
+        D = datimEvents( idWant );
+        if length(D) > 0
+            N = numel(D);
+            X_plot = [D'; D'; NaN(1,N)];
+            Y_plot = repmat([y3; y4; NaN],1,N);
+            plot(X_plot(:),Y_plot(:), 'r-', 'LineWidth', 0.1, 'Color', darkRed );
+        end
+        D = datimEvents( ~idWant );
+        if length(D) > 0
+            N = numel(D);
+            X_plot = [D'; D'; NaN(1,N)];
+            Y_plot = repmat([y3; y4; NaN],1,N);
+            plot(X_plot(:),Y_plot(:), 'g-', 'LineWidth', 0.1, 'Color', darkGreen );
+        end
+
         
+        if sigClipped( data )
+            scnl = append( scnl, ' (CLIPPED)' );
+        end
+        scnl = append( id(nString), '    ', what(nString), '    ', scnl );
+        plotOverTitle( scnl );
+        filePlot = append( id(nString), '--', what(nString), '-analysis_', sprintf("&_%s",string(sta)), '.png' );
+        filePlot = regexprep(filePlot, ' +', '_');
+        filePlot = fullfile( './analyseStringsPlots/v2', filePlot );
+        saveas( gcf, filePlot );
+        if ~showPlot
+            close( gcf );
+        end
 
+        clear sdb;
 
+    end
+   
 
-fprintf( "\n");
 
 warning('on','all');
 
