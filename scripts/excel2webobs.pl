@@ -34,7 +34,7 @@ foreach my $m (1 .. scalar @rowsmulti) {
         $maxMl = -999.0;
     }
 
-    if( $what eq 'VT string' ) {
+    if( index( $what, 'VT string' ) != -1 ) {
         printf "%s started at %s UTC. Duration %.1f minutes. %d triggered, %d located events. Total of %d events identified from continuous data. Maximum ML %3.1f. \n\n", 
             $what, $datimFirst, $duration, $nSeisan, $nLocated, $nTotal, $maxMl;
     }
