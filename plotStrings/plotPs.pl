@@ -57,12 +57,12 @@ foreach my $eventListFile (sort @eventListFiles) {
         my $eventDate = $eventDatim->strftime('%F');
         my $eventTime = join( '.', $eventDatim->strftime('%T'), sprintf('%1d',round($nanosecond/100000000)) );
 
-        my $cmd = join( ' ', '/home/seisan/bin/getnPlot.py --date', $eventDate, '--time', $eventTime, '--pre 1 --dur 2 --shape thin --tag VT_string_event' );
-        print "\n", $cmd, "\n\n";
+        my $cmd = join( ' ', '/home/seisan/bin/getnPlot.py -q --date', $eventDate, '--time', $eventTime, '--pre 1 --dur 2 --shape thin --tag VT_string_event' );
+        #print "\n", $cmd, "\n\n";
         system( $cmd );
 
-        $cmd = join( ' ', '/home/seisan/bin/getnPlot.py --source mseed --date', $eventDate, '--time', $eventTime, '--pre 2 --dur 8 --shape thin --tag VT_string_event' );
-        print "\n", $cmd, "\n\n";
+        #$cmd = join( ' ', '/home/seisan/bin/getnPlot.py --source mseed --date', $eventDate, '--time', $eventTime, '--pre 2 --dur 8 --shape thin --tag VT_string_event' );
+        #print "\n", $cmd, "\n\n";
         ##system( $cmd );
 
     }
@@ -76,7 +76,7 @@ foreach my $eventListFile (sort @eventListFiles) {
     print "\n", $cmd, "\n\n";
     system( $cmd );
 
-    $cmd = join( ' ', 'magick montage *8s2.png -tile', $tile, '-geometry +1+1', join( '', $eventId, '--VT_string-P_arrivals-8s.png' ) ); 
+    #$cmd = join( ' ', 'magick montage *8s2.png -tile', $tile, '-geometry +1+1', join( '', $eventId, '--VT_string-P_arrivals-8s.png' ) ); 
     #print "\n", $cmd, "\n\n";
     #system( $cmd );
 

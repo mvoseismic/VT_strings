@@ -1,0 +1,13 @@
+VTs and VT strings between 01/10/2024 and 01/10/2025 with Seismic
+Moment greater than that for a single VT with magnitude 3.0.
+ 
+Date        Time         max ML    Moment (TNm)    What
+02-Nov-2024 04:51:54        3.3          134.95    VT
+03-Nov-2024 06:56:41        2.9           78.00    VT string
+02-Dec-2024 16:50:08        3.0           72.68    VT string
+14-Dec-2024 17:50:59        3.0           67.63    VT
+19-Dec-2024 14:20:39        3.4         2108.12    VT string
+25-May-2025 00:55:17        3.5          216.23    VT string
+21-Jun-2025 21:52:17        3.6          646.65    VT string
+14-Aug-2025 05:07:38        2.9          105.24    VT string
+10-Sep-2025 19:58:51        3.0           77.82    VT string
